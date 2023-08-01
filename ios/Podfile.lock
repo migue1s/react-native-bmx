@@ -1,4 +1,12 @@
 PODS:
+  - Alamofire (5.7.1)
+  - BMXCall (2.3.1):
+    - BMXCore (~> 2.3.1)
+    - TwilioVideo (~> 5.1)
+  - BMXCore (2.3.1):
+    - Alamofire (~> 5.2)
+    - Japx/Alamofire
+    - OAuthSwift (= 2.1.0)
   - boost (1.76.0)
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.72.3)
@@ -14,7 +22,12 @@ PODS:
   - hermes-engine (0.72.3):
     - hermes-engine/Pre-built (= 0.72.3)
   - hermes-engine/Pre-built (0.72.3)
+  - Japx/Alamofire (4.0.0):
+    - Alamofire
+    - Japx/Core
+  - Japx/Core (4.0.0)
   - libevent (2.1.12)
+  - OAuthSwift (2.1.0)
   - RCT-Folly (2021.07.22.00):
     - boost
     - DoubleConversion
@@ -426,9 +439,11 @@ PODS:
     - React-logger (= 0.72.3)
     - React-perflogger (= 0.72.3)
   - SocketRocket (0.6.1)
+  - TwilioVideo (5.5.0)
   - Yoga (1.14.0)
 
 DEPENDENCIES:
+  - BMXCall
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
@@ -473,9 +488,15 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - BMXCall
+    - BMXCore
     - fmt
+    - Japx
     - libevent
+    - OAuthSwift
     - SocketRocket
+    - TwilioVideo
 
 EXTERNAL SOURCES:
   boost:
@@ -559,6 +580,9 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  BMXCall: 8fc865c1751b17cdadf6315d679cdf53714e3124
+  BMXCore: 983743905fb7c6b87e7388d5141d398418674a95
   boost: 57d2868c099736d80fcd648bf211b4431e51a558
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
   FBLazyVector: 4cce221dd782d3ff7c4172167bba09d58af67ccb
@@ -566,7 +590,9 @@ SPEC CHECKSUMS:
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
   hermes-engine: 10fbd3f62405c41ea07e71973ea61e1878d07322
+  Japx: 4bb2d79d023af5e7ea44c0a2875c4b070080e111
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
+  OAuthSwift: ab1675598273e04355e0282459c328e65c9ddacd
   RCT-Folly: 424b8c9a7a0b9ab2886ffe9c3b041ef628fd4fb1
   RCTRequired: a2faf4bad4e438ca37b2040cb8f7799baa065c18
   RCTTypeSafety: cb09f3e4747b6d18331a15eb05271de7441ca0b3
@@ -600,8 +626,9 @@ SPEC CHECKSUMS:
   React-utils: 2515573955451f669d3221d6bc759f0cda44edad
   ReactCommon: 354a3ffa303ec27f8989a812b736e4839b77c57a
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
+  TwilioVideo: 4da3eb08eb3a318584c48de58a2cf144c02dc5fd
   Yoga: 8796b55dba14d7004f980b54bcc9833ee45b28ce
 
-PODFILE CHECKSUM: 46a605dae9ab683a328f7bccfdad7f9819819019
+PODFILE CHECKSUM: a98c8f70a48e65463088b0ae9eb21c66751fb55a
 
 COCOAPODS: 1.12.1

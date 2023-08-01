@@ -49,6 +49,8 @@ target 'bmxtest' do
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
+  
+  pod 'BMXCall'
 
   target 'bmxtestTests' do
     inherit! :complete
@@ -63,5 +65,15 @@ target 'bmxtest' do
       :mac_catalyst_enabled => false
     )
     __apply_Xcode_12_5_M1_post_install_workaround(installer)
+    
+    # BMX Module compatibility
+    installer.pods_project.targets.each do |target|
+      if ['BMXCall', 'BMXCore', 'Alamofire', 'Japx', 'OAuthSwift'].include? target.name
+        target.build_configurations.each do |config|
+            config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+            config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64 i386'
+        end
+      end
+    end
   end
 end
